@@ -1,10 +1,14 @@
 import React from "react";
+import {HashRouter as Router, Route} from "react-router-dom";
+import Detail from "../routes/Detail";
+import Home from "../routes/Home";
 
 const app = () => {
   return (
-    <div className="App">
-      <h1>hello world</h1>
-    </div>
+    <Router className="App">
+      <Route exact path="/" component={Home} />
+      <Route exact path="/:id" component={Detail} />
+    </Router>
   );
 };
 
